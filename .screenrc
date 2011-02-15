@@ -17,8 +17,5 @@ caption splitonly "%{= bb}%{+b w}%t %= "
 hardstatus alwayslastline '%{= kG}[ %{G}%H (%1`) %{g}][%= %{w}%?%-w%?%{+b r}[ %{+b W}%n %t%?(%u)%?%{r} ]%{-b w}%?%+w%?%?%= %{g}][%{B} %D %d.%m.%y %{w}%c %{g}]'
 bindkey -d -k kb stuff "\010"
 
-# Pomodoro technique, commented
-#backtick 1 5 5 /home/andrea/Esperimenti/pomodoro-scripts/read-pomodoro.sh
-
 # Show the current IP
 backtick 1 60 60 $HOME/.scripts/ip.sh
