@@ -1,0 +1,21 @@
+startup_message off
+deflogin on
+vbell off
+
+# Roba che non conosco, copiata da /etc/screenrc di Debian
+termcapinfo vt100 dl=5\E[M
+termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+termcapinfo xterm*|linux*|rxvt*|Eterm* OP
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+defnonblock 5
+
+# CUSTOM
+shell -$SHELL
+defscrollback 10000
+
+# Caption personalizzata
+caption splitonly "%{= bb}%{+b w}%t %= "
+hardstatus alwayslastline '%{= kG}[ %{G}%H (%1`) %{g}][%= %{w}%?%-w%?%{+b r}[ %{+b W}%n %t%?(%u)%?%{r} ]%{-b w}%?%+w%?%?%= %{g}][%{B} %D %d.%m.%y %{w}%c %{g}]'
+bindkey -d -k kb stuff "\010"
+#backtick 1 5 5 /home/andrea/Esperimenti/pomodoro-scripts/read-pomodoro.sh
+backtick 1 60 60 /home/andrea/.ip.sh
