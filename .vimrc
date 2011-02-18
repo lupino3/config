@@ -31,8 +31,8 @@ set ruler
 " Display commands as you type them
 set showcmd	
 
-" Incremental search
-set incsearch
+" Disable incremental search
+set noincsearch
 
 " Use shiftwidth when indenting and when inserting a <Tab>
 set smarttab
