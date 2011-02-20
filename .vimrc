@@ -59,6 +59,11 @@ set wildmenu
 " Fix for pyflakes, that screws the quickfix window.
 let g:pyflakes_use_quickfix = 0
 
+" Persistent undo
+if v:version >= 703
+    set undofile
+endif
+
 " Key mappings
 " -----------------------------------------------------------------------------
 
