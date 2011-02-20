@@ -10,9 +10,13 @@ Use and modify them as you wish, I hereby put them in the public domain.
 
 Here is a list of included software that was not written by me, along with the
 respective version and a link to the homepage:
-- pyflakes.vim 3.01 (http://www.vim.org/scripts/script.php?script_id=2441)
-- po.vim       1.2  (http://www.vim.org/scripts/script.php?script_id=695)
-- TabLaTeX     1.1  (http://www.cavecanen.org/latex/tablatex/)
+- pyflakes.vim      3.01 (http://www.vim.org/scripts/script.php?script_id=2441)
+- po.vim            1.2  (http://www.vim.org/scripts/script.php?script_id=695)
+- TabLaTeX          1.1  (http://www.cavecanen.org/latex/tablatex/)
+- vim-makegreen     n/a  (https://github.com/reinh/vim-makegreen/) 
+  [retrieved 20/02/2011]
+- vim-nosecompiler  n/a  (https://github.com/olethanh/vim-nosecompiler)
+  [retrieved 20/02/2011]
 
 Of course those are released under the license chosen by the original
 developers. You should refer to the respective web sites to obtain info about
