@@ -105,6 +105,19 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Functions
+" -----------------------------------------------------------------------------
+function! s:LookupPythonModule()
+    let l:module_name = expand("<cword>")
+    let l:cmd = "/usr/bin/python -c 'import " . l:module_name . "; print " .  l:module_name . ".__file__[:-1]'"
+    let l:module = system(l:cmd)
+    try
+        exe "sp " . l:module
+    catch /E172:/
+        echo "Not a module, or maybe a builtin module. Couldn't reach it, sorry."
+    endtry
+endfunction
+
 " Autocommands
 " -----------------------------------------------------------------------------
 
@@ -133,6 +146,8 @@ if has("autocmd")
     au FileType python match errorMsg /^\t+/
     au FileType python set makeprg=pep8\ --repeat\ %
 
+    au FileType python command! LookupPythonModule :call <SID>LookupPythonModule()
+    au Filetype python map <F7> :LookupPythonModule<CR>
     " If there is a local .lvimrc file, source it (useful for project-related vim
     " settings)
     au BufRead,BufNewFile * let x=expand('%:p:h')."/.lvimrc" | if filereadable(x) | exe "source ".substitute(x, ' ', '\\ ', 'g') | endif
