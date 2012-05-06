@@ -12,5 +12,5 @@ for f in $FILES; do
     if [[ -f ~/$f || -d ~/$f ]]; then
         mv ~/$f backup/
     fi
-    ln -s $f ~/$f
+    ln -s $(pwd)/$f ~/$f
 done
