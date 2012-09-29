@@ -5,6 +5,7 @@ if [[ ! -d backup-config ]]; then
 fi
 
 for f in $FILES; do
+    echo -n "Installing $f... "
     if [[ -h ~/$f ]]; then
         echo "~/$f is already a symbolic link. Please fix it."
         continue
@@ -13,4 +14,5 @@ for f in $FILES; do
         mv ~/$f backup/
     fi
     ln -s $(pwd)/$f ~/$f
+    echo "done."
 done
