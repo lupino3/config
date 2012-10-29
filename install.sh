@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=".screenrc .vimrc .scripts .vim .i3 .xsession"
+FILES=".screenrc .vimrc .scripts .vim .i3 .xsession .i3status.conf"
 if [[ ! -d backup-config ]]; then
     mkdir backup-config
 fi
