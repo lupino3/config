@@ -14,13 +14,16 @@ set grepprg=grep\ -nH\ $*
 " Dark background color. Leads to brighter fonts.
 set background=dark
 
+" Colorscheme
+colo wombat256
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Tabs become 4 spaces
+" Tabs become 2 spaces
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " History of 100 commands
 set history=100
