@@ -27,8 +27,20 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Prompt. Time (mm:ss) and current directory.
-PS1="\[\033[01;32m\]\$(date +%H\:%M)\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]\$ "
+# Prompt. Time (hh:mm), current directory and git branch.
+create_ps1() {
+  local TIME="\A"
+  local DIR="\W"
+  local GIT_BRANCH="\$(__git_ps1)"  # Will be evaluated every time PS1 is used.
+
+  local fmt_bold=$(tput bold)
+  local fmt_green=${fmt_bold}$(tput setaf 2)
+  local fmt_blue=${fmt_bold}$(tput setaf 4)
+  local fmt_clean=$(tput sgr0)
+
+  echo "${fmt_green}${TIME} ${fmt_blue}${DIR}${fmt_clean}${GIT_BRANCH}\$ "
+}
+PS1=$(create_ps1)
 
 # Enable color support for ls and grep. Set a few handy aliases.
 if [ -x /usr/bin/dircolors ]; then
@@ -42,6 +54,11 @@ fi
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+fi
+
+# Advertise 256 colors support.
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
 fi
 
 # Source local aliases.
