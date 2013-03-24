@@ -9,6 +9,9 @@ termcapinfo xterm*|linux*|rxvt*|Eterm* OP
 termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 defnonblock 5
 
+# Advertise 256 colors support.
+term screen-256color
+
 shell -$SHELL
 defscrollback 10000
 
