@@ -1,0 +1,20 @@
+# You need git >1.7.10 to use the include stanza.
+[include]
+  path = ~/.local_gitconfig
+[merge]
+	tool = vimdiff
+[mergetool "diffconflicts"]
+	cmd = diffconflict vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
+[push]
+	default = simple
+[color]
+	ui = true
+[alias]
+    l = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10
+    lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    co = checkout
+[diff]
+	tool = vimdiff
