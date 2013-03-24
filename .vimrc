@@ -3,7 +3,6 @@
 "
 " Based on an old vimrc.example.
 
-
 " Vim Settings
 " -----------------------------------------------------------------------------
 
@@ -36,6 +35,11 @@ set showcmd
 
 " Disable incremental search
 set noincsearch
+
+" Set ignorecase and smartcase (ignore case in searches, except if I
+" explicitly use uppercase characters).
+set ignorecase
+set smartcase
 
 " Use shiftwidth when indenting and when inserting a <Tab>
 set smarttab
@@ -155,4 +159,9 @@ if has("autocmd")
     " settings)
     au BufRead,BufNewFile * let x=expand('%:p:h')."/.lvimrc" | if filereadable(x) | exe "source ".substitute(x, ' ', '\\ ', 'g') | endif
     let x=expand('%:p:h')."/.lvimrc" | if filereadable(x) | exe "source ".substitute(x, ' ', '\\ ', 'g') | endif
+endif
+
+" Read a local .local_vimrc, if it exists.
+if filereadable(expand("~/.local_vimrc")) 
+  exe "source ".expand("~/.local_vimrc")
 endif
