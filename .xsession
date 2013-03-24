@@ -20,7 +20,7 @@ urxvtd -q -f -o
 # Disable touchpad
 xinput set-prop 11 "Device Enabled" 0
 
-if [[ -f .xsession-local ]]; then
+if [[ -x .xsession-local ]]; then
     source .xsession-local
 fi
 
