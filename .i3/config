@@ -141,4 +141,4 @@ bar {
         status_command /usr/bin/i3status
 }
 
-# bindsym Control+Mod1+l exec /usr/bin/i3lock
+bindsym $mod+x move workspace to output right
