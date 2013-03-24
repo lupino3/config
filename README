@@ -5,6 +5,7 @@ The files written by me are:
 - .vimrc (derived from an old vimrc.example)
 - .screenrc (derived from an old Debian /etc/screenrc)
 - .scripts/ip.sh
+- a few parts of .bashrc
 
 Use and modify them as you wish, I hereby put them in the public domain.
 
@@ -14,17 +15,7 @@ respective version and a link to the homepage:
 - pyflakes.vim      3.01 (http://www.vim.org/scripts/script.php?script_id=2441)
 - po.vim            1.2  (http://www.vim.org/scripts/script.php?script_id=695)
 - TabLaTeX          1.1  (http://www.cavecanen.org/latex/tablatex/)
-- vim-makegreen     n/a  (https://github.com/reinh/vim-makegreen/) 
-  [retrieved 20/02/2011]
-- vim-nosecompiler  n/a  (https://github.com/olethanh/vim-nosecompiler)
-  [retrieved 20/02/2011]
 
 Of course those are released under the license chosen by the original
 developers. You should refer to the respective web sites to obtain info about
 the licenses.
-
-Have fun,
-
--- 
-Andrea Spadaccini (lupino3)
-andrea (dot) spadaccini (at) gmail (dot) com
