@@ -11,7 +11,7 @@ for f in $FILES; do
         continue
     fi
     if [[ -f ~/$f || -d ~/$f ]]; then
-        mv ~/$f backup/
+        mv ~/$f backup-config/
     fi
     ln -s $(pwd)/$f ~/$f
     echo "done."
