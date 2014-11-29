@@ -31,10 +31,10 @@ create_ps1() {
   local DIR="\W"
   local GIT_BRANCH="\$(__git_ps1)"  # Will be evaluated every time PS1 is used.
 
-  local fmt_bold=$(tput bold)
-  local fmt_green=${fmt_bold}$(tput setaf 2)
-  local fmt_blue=${fmt_bold}$(tput setaf 4)
-  local fmt_clean=$(tput sgr0)
+  local fmt_bold="\[$(tput bold)"
+  local fmt_green="${fmt_bold}$(tput setaf 2)\]"
+  local fmt_blue="${fmt_bold}$(tput setaf 4)\]"
+  local fmt_clean="\[$(tput sgr0)\]"
 
   echo "${fmt_green}${TIME} ${fmt_blue}${DIR}${fmt_clean}${GIT_BRANCH}\$ "
 }
