@@ -24,6 +24,15 @@ bind '"\e."':yank-last-arg
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Define __git_ps1, if it's not defined.
+if [[ "$(type -t __git_ps1)" != "function" ]]; then
+  __git_ps1() {
+    local b="$(git symbolic-ref HEAD 2> /dev/null)"
+    if [ -n "$b" ]; then
+      printf " (git:%s)" "${b##refs/heads/}"
+    fi
+  }
+fi
 
 # Prompt. Time (hh:mm), current directory and git branch.
 create_ps1() {
