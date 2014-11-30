@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=".bashrc .screenrc .vimrc .scripts .vim .i3 .xsession .i3status.conf .gitconfig"
+FILES=".bashrc .screenrc .vimrc .scripts .i3 .xsession .i3status.conf .gitconfig"
 if [[ ! -d backup-config ]]; then
     mkdir backup-config
 fi

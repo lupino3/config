@@ -10,11 +10,39 @@
 set nocompatible
 set grepprg=grep\ -nH\ $*
 
+" Set up Vundle plugins. Instructions to bootstrap this at
+" https://github.com/gmarik/Vundle.vim
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Vundle must manage itself.
+Plugin 'gmarik/Vundle.vim'
+
+" Other plugins.
+Bundle 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+
+" Color scheme
+Plugin 'nanotech/jellybeans.vim'
+call vundle#end()
+filetype plugin indent on
+" Done setting up Vundle.
+
+" Airline configuration.
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+let g:airline_powerline_fonts = 1
+
+" Syntastic configuration.
+let g:syntastic_always_populate_loc_list = 1
+
 " Dark background color. Leads to brighter fonts.
 set background=dark
 
 " Colorscheme
-colo wombat256
+colo jellybeans
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -24,14 +52,14 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-" History of 100 commands
-set history=100
+" History of 10000 commands
+set history=10000
 
 " Show info about the cursor position
 set ruler
 
 " Display commands as you type them
-set showcmd	
+set showcmd
 
 " Disable incremental search
 set noincsearch
@@ -89,7 +117,7 @@ map <F5> :make<CR>
 
 " Use <C-J> (resp. <C-K>) to move one window up (resp. down) and maximize the
 " new window
-map <C-J> <C-W>j<C-W>_ 
+map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 imap <C-J> <Esc><C-J>a
 imap <C-K> <Esc><C-K>a
@@ -134,7 +162,7 @@ if has("autocmd")
     " 'cindent' is on in C files, etc.
     " Also load indent files, to automatically do language-dependent indenting.
     filetype plugin indent on
-    
+
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
     " (happens when dropping a file on gvim).
@@ -142,11 +170,11 @@ if has("autocmd")
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
         \ endif
-    
+
     " Forced file types for some extensions
     au BufNewFile,BufRead *.thtml setfiletype php
     au BufNewFile,BufRead *.tex setfiletype tex
-    au BufNewFile,BufRead *.as setfiletype actionscript 
+    au BufNewFile,BufRead *.as setfiletype actionscript
 
     " Filetype-dependent autocommands
     au FileType java set makeprg=ant\ -emacs
@@ -162,6 +190,6 @@ if has("autocmd")
 endif
 
 " Read a local .local_vimrc, if it exists.
-if filereadable(expand("~/.local_vimrc")) 
+if filereadable(expand("~/.local_vimrc"))
   exe "source ".expand("~/.local_vimrc")
 endif
