@@ -2,7 +2,7 @@ startup_message off
 deflogin on
 vbell off
 
-# Various things taken from Debian /etc/screenrc 
+# Various things taken from Debian /etc/screenrc
 termcapinfo vt100 dl=5\E[M
 termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 termcapinfo xterm*|linux*|rxvt*|Eterm* OP
