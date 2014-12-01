@@ -44,6 +44,9 @@ set background=dark
 " Colorscheme
 colo jellybeans
 
+" Line numbers
+set number
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
