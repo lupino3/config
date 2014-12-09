@@ -121,6 +121,17 @@ map <F4> :cd %:p:h<CR>
 " Run make
 map <F5> :make<CR>
 
+" Toggle color column
+function! g:ToggleColorColumn()
+  if &colorcolumn != ''
+    setlocal colorcolumn&
+  else
+    setlocal colorcolumn=+1
+  endif
+endfunction
+
+map <F9> :call g:ToggleColorColumn()<CR>
+
 " Toggle spell checking
 map <F12> :setlocal spell! spelllang=en_us<CR>
 
