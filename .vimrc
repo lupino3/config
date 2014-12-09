@@ -121,6 +121,9 @@ map <F4> :cd %:p:h<CR>
 " Run make
 map <F5> :make<CR>
 
+" Toggle spell checking
+map <F12> :setlocal spell! spellang=en_us<CR>
+
 " Use <C-J> (resp. <C-K>) to move one window up (resp. down) and maximize the
 " new window
 map <C-J> <C-W>j<C-W>_
