@@ -22,6 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kshenoy/vim-signature'
 
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
