@@ -25,8 +25,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
 
 " Markdown
-Plugin "godlygeek/tabular"
-Plugin "plasticboy/vim-markdown"
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
