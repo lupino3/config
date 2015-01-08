@@ -24,6 +24,10 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
 
+" Markdown
+Plugin "godlygeek/tabular"
+Plugin "plasticboy/vim-markdown"
+
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
 call vundle#end()
@@ -196,6 +200,7 @@ if has("autocmd")
     au BufNewFile,BufRead *.thtml setfiletype php
     au BufNewFile,BufRead *.tex setfiletype tex
     au BufNewFile,BufRead *.as setfiletype actionscript
+    au BufNewFile,BufRead *.todo setfiletype mkd
 
     " Filetype-dependent autocommands
     au FileType java set makeprg=ant\ -emacs
