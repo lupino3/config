@@ -68,6 +68,9 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 
+# Mouse speed.
+xset m 7 1
+
 # Source local aliases.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
