@@ -10,7 +10,7 @@ export GTK_IM_MODULE=xim
 
 # For media keys and touchpad support. Don't forget to install Cinnamon to
 # make it work.
-/usr/libexec/cinnamon-settings-daemon &
+/usr/bin/cinnamon-settings-daemon &
 
 # NetworkManager.
 /usr/bin/nm-applet &
