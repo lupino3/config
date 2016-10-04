@@ -30,9 +30,16 @@ Plugin 'plasticboy/vim-markdown'
 
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
+
+" JS beautifier
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
 call vundle#end()
 filetype plugin indent on
 " Done setting up Vundle.
+
+" Mapping for jsbeautify
+map <c-f> :call JsBeautify()<CR>
 
 " Airline configuration.
 set laststatus=2
