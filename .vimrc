@@ -56,9 +56,6 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_go_exec = '~/bin/g3build'
-let g:syntastic_go_golint_exec = '~/bin/g3lint'
-let g:syntastic_go_govet_exec = '~/bin/g3vet'
 
 " Dark background color. Leads to brighter fonts.
 set background=dark
