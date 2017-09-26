@@ -74,9 +74,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-" Adjust timeout after hitting <ESC> (default is an annoying 1000 ms)
-set timeoutlen=100
-
 " History of 10000 commands
 set history=10000
 
