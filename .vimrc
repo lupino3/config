@@ -28,6 +28,9 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Diff from VCS
+Plugin 'mhinz/vim-signify'
+
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
 
@@ -49,6 +52,13 @@ let g:airline_powerline_fonts = 1
 
 " Syntastic configuration.
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_check_on_open = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_go_go_exec = '~/bin/g3build'
+let g:syntastic_go_golint_exec = '~/bin/g3lint'
+let g:syntastic_go_govet_exec = '~/bin/g3vet'
 
 " Dark background color. Leads to brighter fonts.
 set background=dark
@@ -142,6 +152,13 @@ function! g:ToggleColorColumn()
   endif
 endfunction
 
+" Toggle folding with space
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+" Temporary hack
+map <silent> <F10> :SyntasticCheck<CR>
+
 map <F9> :call g:ToggleColorColumn()<CR>
 
 " Toggle spell checking
@@ -226,3 +243,6 @@ endif
 if filereadable(expand("~/.local_vimrc"))
   exe "source ".expand("~/.local_vimrc")
 endif
+
+" Have % match angle brackets as well.
+set matchpairs+=<:>
