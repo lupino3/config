@@ -11,3 +11,15 @@ A simple installation script (`install.sh`) is provided. It first backs up any
 existing files or directories matching the ones provided by the repo by moving
 them to the `backup-config` directory, and then installs the files by creating
 symbolic links from the home directory to the git repo directory.
+
+## Vim plugins installation
+
+Complete instructions: https://github.com/VundleVim/Vundle.vim.\
+
+Summary:
+
+```
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+From vim: `:VundleInstall`.:
