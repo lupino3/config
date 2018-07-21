@@ -22,6 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sensible'
 Plugin 'kshenoy/vim-signature'
 
 " Markdown
@@ -45,8 +46,6 @@ filetype plugin indent on
 map <c-f> :call JsBeautify()<CR>
 
 " Airline configuration.
-set laststatus=2
-set encoding=utf-8
 set t_Co=256
 let g:airline_powerline_fonts = 1
 
@@ -66,9 +65,6 @@ colo jellybeans
 " Line numbers
 set number
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 " Tabs become 2 spaces
 set expandtab
 set tabstop=2
@@ -77,22 +73,13 @@ set shiftwidth=2
 " History of 10000 commands
 set history=10000
 
-" Show info about the cursor position
-set ruler
-
 " Display commands as you type them
 set showcmd
-
-" Disable incremental search
-set noincsearch
 
 " Set ignorecase and smartcase (ignore case in searches, except if I
 " explicitly use uppercase characters).
 set ignorecase
 set smartcase
-
-" Use shiftwidth when indenting and when inserting a <Tab>
-set smarttab
 
 " Window minimum height set to zero, so that when you have multiple windows you
 " are not forced to see one row for each file.
@@ -109,9 +96,6 @@ set switchbuf=split
 
 " Backup in /tmp
 set bdir=/tmp,.
-
-" Enhanced mode for command-line tab completion
-set wildmenu
 
 " Fix for pyflakes, that screws the quickfix window.
 let g:pyflakes_use_quickfix = 0
@@ -200,12 +184,6 @@ endfunction
 " -----------------------------------------------------------------------------
 
 if has("autocmd")
-    " Enable file type detection.
-    " Use the default filetype settings, so that mail gets 'tw' set to 72,
-    " 'cindent' is on in C files, etc.
-    " Also load indent files, to automatically do language-dependent indenting.
-    filetype plugin indent on
-
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
     " (happens when dropping a file on gvim).
