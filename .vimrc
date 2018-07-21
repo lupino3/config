@@ -18,15 +18,25 @@ call vundle#begin()
 " Vundle must manage itself.
 Plugin 'gmarik/Vundle.vim'
 
-" Other plugins.
+" Syntax checking plugin.
 Bundle 'scrooloose/syntastic'
+
+" Cool and lightweight status line.
 Plugin 'bling/vim-airline'
+
+" Git integration.
 Plugin 'tpope/vim-fugitive'
+
+" Sensible defaults.
 Plugin 'tpope/vim-sensible'
+
+" Toggle, display and navigate marks.
 Plugin 'kshenoy/vim-signature'
 
-" Markdown
+" Align text in tabular format.
 Plugin 'godlygeek/tabular'
+
+" Markdown plugin.
 Plugin 'plasticboy/vim-markdown'
 
 " Diff from VCS
@@ -35,7 +45,7 @@ Plugin 'mhinz/vim-signify'
 " Color scheme
 Plugin 'nanotech/jellybeans.vim'
 
-" JS beautifier
+" JS beautifiers.
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 call vundle#end()
