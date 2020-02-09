@@ -14,7 +14,7 @@ symbolic links from the home directory to the git repo directory.
 
 ## Vim plugins installation
 
-Complete instructions: https://github.com/VundleVim/Vundle.vim.\
+Complete instructions: https://github.com/VundleVim/Vundle.vim.
 
 Summary:
 
@@ -22,4 +22,4 @@ Summary:
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-From vim: `:VundleInstall`.:
+From vim: `:VundleInstall`.
