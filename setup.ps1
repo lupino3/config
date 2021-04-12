@@ -13,7 +13,7 @@ if (-Not (Test-Path ~\.local_gitconfig)) {
 # From https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
 if (-Not (Test-Path $PROFILE)) {
     cp profile-template.ps1 $PROFILE
