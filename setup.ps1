@@ -21,6 +21,11 @@ if (-Not (Test-Path ~\.local_gitconfig)) {
     Write-Output "Please edit ~/.local_gitconfig, adding the [user] stanza (name, email)"
 }
 
+if (-Not (Test-Path ~\.ssh\id_rsa)) {
+    Write-Output "Generating a public key for GitHub. Set a non-empty passphrase."
+    ssh-keygen
+}
+
 # From https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
