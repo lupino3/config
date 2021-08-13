@@ -1,2 +1,2 @@
-Set-PoshPrompt -Theme ys
+Set-PoshPrompt -Theme wopian
 
