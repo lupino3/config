@@ -1,3 +1,4 @@
+# TODO: this file should be self-sufficient (no dependencies on external files) so I can just download it and run it.
 # Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 if (-not (Test-Path ~\.gitconfig)) {
     Write-Output "Copying .gitconfig"
