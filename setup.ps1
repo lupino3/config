@@ -5,6 +5,9 @@ if (-not (Test-Path ~\.gitconfig)) {
     Copy-Item $PSScriptRoot\.gitconfig ~
 }
 
+# Disable Edge windows in alt-tab
+Set-ItemProperty  -path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\' -Name MultiTaskingAltTabFilter -Value 3
+
 # Install software. Use a very hacky sentinel file to skip if not needed.
 # Install the updated Windows Package Manager from https://github.com/microsoft/winget-cli/releases before running this section.
 # TODO: use winget import JSON file.
