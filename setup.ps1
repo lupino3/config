@@ -42,5 +42,5 @@ if (-Not (Test-Path $PROFILE)) {
 }
 
 Write-Output "Install FiraCode Nerd Font and set it as the font for Windows Terminal"
-Write-Output '"fontFace": "FiraMono Nerd Font"'
+Write-Output '"fontFace": "FiraCode Nerd Font"'
 Write-Output "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"
