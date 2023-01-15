@@ -228,3 +228,9 @@ endif
 
 " Have % match angle brackets as well.
 set matchpairs+=<:>
+
+" Move home row fingers to the standard typing position.
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
