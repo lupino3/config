@@ -18,3 +18,7 @@
     co = checkout
 [diff]
 	tool = vimdiff
+[core]
+        autocrlf = true
+[push]
+        autoSetupRemote = true
